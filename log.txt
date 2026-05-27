@@ -1,0 +1,62 @@
+C:\Program Files\nodejs\node.exe --experimental-network-inspection .\index.js
+[dotenv@17.3.1] injecting env (4) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+Successfully parsed 20 items.
+Running Data Quality Agent with sample data: [{"json":{"row_count":20,"columns":["employeeid","name","department","age","salary","joiningyear"],"missing_percentage":{"employeeid":"100.00","name":"0.00","department":"0.00","age":"0.00","salary":"0.00","joiningyear":"0.00"},"type_analysis":{"employeeid":{"numeric_percentage":"0.00"},"name":{"numeric_percentage":"0.00"},"department":{"numeric_percentage":"0.00"},"age":{"numeric_percentage":"100.00"},"salary":{"numeric_percentage":"100.00"},"joiningyear":{"numeric_percentage":"100.00"}},"anomaly_signals":{"employeeid":{"negative_values":0},"name":{"negative_values":0},"department":{"negative_values":0},"age":{"negative_values":0},"salary":{"negative_values":0},"joiningyear":{"negative_values":0}},"sample_rows":[{"﻿employeeid":"1","name":"Amit Sharma","department":"Engineering","age":"28","salary":"55000","joiningyear":"2020"},{"﻿employeeid":"2","name":"Priya Das","department":"Marketing","age":"32","salary":"62000","joiningyear":"2019"},{"﻿employeeid":"3","name":"Rahul Sen","department":"Engineering","age":"29","salary":"58000","joiningyear":"2021"},{"﻿employeeid":"4","name":"Sneha Roy","department":"HR","age":"35","salary":"60000","joiningyear":"2018"},{"﻿employeeid":"5","name":"Arjun Mehta","department":"Finance","age":"41","salary":"72000","joiningyear":"2016"}]}}]
+Data Quality Analysis Result: {"missing_values":{"examples":0,"free_throws_made":0,"free_throws_attempted":0,"free_throws_percentage":0,"field_goals_made":0,"field_goals_attempted":0,"field_goal_percentage":0,"two_points_made":0,"two_points_attempted":0,"two_points_percentage":0,"three_points_made":0,"three_points_attempted":0,"three_points_percentage":0,"points":0,"assists":0,"rebounds":0,"steals":0,"blocks":0,"turnover":0,"fouls":0}}
+--- Raw Object ---
+{total_employees: 20, average_salary: 62650, highest_salary: 82000, lowest_salary: 52000, average_age: '32.0'}
+
+--- Formatted JSON ---
+{
+  "total_employees": 20,
+  "average_salary": 62650,
+  "highest_salary": 82000,
+  "lowest_salary": 52000,
+  "average_age": "32.0"
+}
+WORKFORCE OVERVIEW
+- Total employees: 20
+- Average age: 32.0 years
+- Organizational mix: 40% Engineering; 60% non-Engineering (Marketing, HR, Finance)
+
+SALARY INSIGHTS
+- Average salary: $62,650
+- Highest salary: $82,000
+- Lowest salary: $52,000
+- Salary range: $30,000
+- Dispersion notes: Highest is approximately 31% above the average; lowest is approximately 17% below the average. This suggests a moderate spread consistent with multiple role levels; monitor for compression at the lower band and ensure internal equity across comparable roles.
+
+DEPARTMENT DISTRIBUTION
+- Engineering: 8 employees (40%)
+- Marketing: 4 employees (20%)
+- HR: 4 employees (20%)
+- Finance: 4 employees (20%)
+
+KEY OBSERVATIONS
+- Headcount is balanced across non-engineering functions, with Engineering as the largest single team at 40%.
+- HR and Finance each account for 20% of total headcount, which is sizable for a 20-person organization; opportunities may exist to streamline through process improvements or tooling as the company scales.
+- The average age of 32 indicates a relatively early-career workforce; this can support agility and growth but increases the need for structured development, mentorship, and clear career paths.
+- The $30,000 salary range points to role/seniority differences; without median or departmental salary detail, equity risks cannot be confirmed, but the lower bound warrants a review to prevent pay compression and turnover risk in entry-level roles.
+
+RECOMMENDATIONS
+- Compensation and pay bands
+  - Establish or refresh salary bands by role and level, with clear criteria for progression.
+  - Conduct an internal equity review, prioritizing roles near the $52,000 floor, and implement adjustments where misalignments are found.
+  - Benchmark compensation against market twice yearly and standardize offer and merit-increase guidelines.
+
+- Workforce planning
+  - Align hiring with short-term strategic priorities (product delivery vs. go-to-market). If product velocity is a priority, consider adding 2–4 Engineering FTEs or targeted upskilling; if growth marketing is the focus, assess ROI of current marketing capacity before expanding.
+  - Define target department ratios for the next 2–3 quarters to guide proactive recruiting.
+
+- Optimize G&A footprint
+  - Review HR and Finance workload, role scope, and tooling. Consider role consolidation, shared services, or automation to achieve a leaner support ratio as headcount grows.
+
+- Talent development and retention
+  - Implement mentorship programs, career ladders, and management training suitable for an early-career workforce.
+  - Formalize performance cycles and feedback cadence to support growth and reduce attrition risk.
+
+- Data and reporting enhancements
+  - Track headcount by level, tenure, and critical skills; monitor attrition, offer acceptance, and time-to-fill.
+  - Capture department-level salary distributions and pay equity metrics to identify compression and any demographic pay gaps.
+  - Develop a quarterly workforce dashboard summarizing headcount, salary bands, hiring pipeline, and turnover trends.
+Launch configuration created based on 'package.json'.
